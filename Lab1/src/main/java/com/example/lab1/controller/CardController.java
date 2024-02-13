@@ -24,16 +24,16 @@ public class CardController {
     }
 
     @GetMapping()
-    public ResponseEntity<List<Card>> create() {
+    public ResponseEntity<List<Card>> readAll() {
         return new ResponseEntity<>(cardService.findAll(), HttpStatus.OK);
     }
 
     @PutMapping()
-    public ResponseEntity<Card> create(@RequestBody Card card) {
+    public ResponseEntity<Card> update(@RequestBody Card card) {
         return new ResponseEntity<>(cardService.update(card), HttpStatus.OK);
     }
 
-    @DeleteMapping()
+    @DeleteMapping("/{id}")
     public HttpStatus delete(@PathVariable Long id) {
         cardService.delete(id);
         return HttpStatus.OK;

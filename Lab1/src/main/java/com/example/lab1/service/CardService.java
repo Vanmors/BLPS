@@ -2,10 +2,8 @@ package com.example.lab1.service;
 
 import com.example.lab1.dto.CardDTO;
 import com.example.lab1.entity.Card;
-import com.example.lab1.entity.Person;
 import com.example.lab1.repository.CardRepository;
 import lombok.AllArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
