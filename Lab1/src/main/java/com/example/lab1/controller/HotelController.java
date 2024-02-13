@@ -24,7 +24,10 @@ public class HotelController {
     public ResponseEntity<List<HotelNumber>> getHotels(@RequestParam LocalDate dataBegin,
                                                        @RequestParam LocalDate dataEnd,
                                                        @RequestParam String city) {
-
+        var hotels = hotelService.getAvailableRooms(city, dataBegin, dataEnd);
+        if (hotels == null || hotels.size() == 0){
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
         return new ResponseEntity<>(hotelService.getAvailableRooms(city, dataBegin, dataEnd), HttpStatus.OK);
     }
 }
