@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
 
 @RestController()
@@ -20,7 +21,14 @@ public class CardController {
 
     @PostMapping()
     public ResponseEntity<Card> create(@RequestBody CardDTO cardDTO) {
-        return new ResponseEntity<>(cardService.create(cardDTO), HttpStatus.OK);
+        Card card;
+        try {
+            card = cardService.create(cardDTO);
+        }
+        catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.EXPECTATION_FAILED);
+        }
+        return new ResponseEntity<>(card, HttpStatus.OK);
     }
 
     @GetMapping()
