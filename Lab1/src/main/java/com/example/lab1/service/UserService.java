@@ -1,8 +1,8 @@
 package com.example.lab1.service;
 
-import com.example.lab1.dto.UserDTO;
-import com.example.lab1.entity.User;
-import com.example.lab1.repository.UserRepository;
+import com.example.lab1.dto.UserAccountDTO;
+import com.example.lab1.entity.UserAccount;
+import com.example.lab1.repository.UserAccountRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -12,21 +12,21 @@ import java.util.List;
 @AllArgsConstructor
 public class UserService {
 
-    private final UserRepository repository;
+    private final UserAccountRepository repository;
 
-    public User create(UserDTO userDTO){
-        User person = User.builder().
-                email(userDTO.getEmail()).
-                password(userDTO.getPassword()).
+    public UserAccount create(UserAccountDTO userAccountDTO){
+        UserAccount person = UserAccount.builder().
+                email(userAccountDTO.getEmail()).
+                password(userAccountDTO.getPassword()).
                 build();
         return repository.save(person);
     }
 
-    public List<User> readAll() {
+    public List<UserAccount> readAll() {
         return repository.findAll();
     }
 
-    public User update(User person) {
+    public UserAccount update(UserAccount person) {
         return repository.save(person);
     }
 

@@ -11,7 +11,7 @@ import lombok.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class UserAccount {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
