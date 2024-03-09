@@ -12,12 +12,13 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 @RestController
 @AllArgsConstructor
 @RequestMapping("/hotel")
 public class HotelController {
-
     private final HotelNumberService hotelService;
     private final ReservationService reservationService;
 
@@ -33,7 +34,15 @@ public class HotelController {
     }
 
     @PostMapping()
-    public ResponseEntity<Reservation> chooseHotelRoom(@RequestBody ReservationDTO reservationDTO) {
-        return new ResponseEntity<>(reservationService.create(reservationDTO), HttpStatus.OK);
+    public ResponseEntity<Reservation> startToChooseHotelRoom(@RequestBody ReservationDTO reservationDTO) {
+        var reservation = reservationService.createTemporary(reservationDTO);
+        reservationService.setTimer(reservation.getId());
+        return new ResponseEntity<>(reservation, HttpStatus.OK);
     }
+
+//    @PostMapping()
+//    public ResponseEntity<Reservation> completeToChooseHotelRoom(@RequestBody ReservationDTO reservationDTO) {
+//        //todo переделать.
+//        return new ResponseEntity<>(reservationService.createCompleted(reservationDTO), HttpStatus.OK)
+//    }
 }

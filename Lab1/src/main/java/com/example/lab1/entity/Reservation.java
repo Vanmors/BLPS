@@ -24,4 +24,7 @@ public class Reservation {
     private Long hotelId;
     private LocalDate dateBegin;
     private LocalDate dateEnd;
+
+    //добавил
+    private boolean isPayed;
 }
