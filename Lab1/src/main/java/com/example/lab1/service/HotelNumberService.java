@@ -1,9 +1,6 @@
 package com.example.lab1.service;
 
-import com.example.lab1.dto.CardDTO;
-import com.example.lab1.entity.Card;
 import com.example.lab1.entity.HotelNumber;
-import com.example.lab1.repository.CardRepository;
 import com.example.lab1.repository.HotelNumberRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
