@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @Data
 @Builder
 public class HotelNumber {
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Long id;
 
