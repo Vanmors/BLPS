@@ -1,7 +1,6 @@
 package com.example.lab1.controller;
 
 
-import com.example.lab1.dto.CustomerDTO;
 import com.example.lab1.entity.Customer;
 import com.example.lab1.service.CustomerService;
 import lombok.AllArgsConstructor;

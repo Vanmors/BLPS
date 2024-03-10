@@ -2,19 +2,21 @@ package com.example.lab1.controller;
 
 import com.example.lab1.dto.UserAccountDTO;
 import com.example.lab1.entity.UserAccount;
-import com.example.lab1.service.UserService;
+import com.example.lab1.service.UserAccountService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @AllArgsConstructor
+@RequestMapping("/user")
 public class UserController {
 
-    private final UserService userService;
+    private final UserAccountService userService;
 
     @PostMapping
     public ResponseEntity<UserAccount> create(@RequestBody UserAccountDTO userAccountDTO) {
