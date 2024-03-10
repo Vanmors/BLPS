@@ -25,6 +25,6 @@ public class Reservation {
     private LocalDate dateBegin;
     private LocalDate dateEnd;
 
-    //добавил
     private boolean isPayed;
+    private Long customerId;
 }

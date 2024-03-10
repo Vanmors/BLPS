@@ -6,7 +6,6 @@ import com.example.lab1.repository.ReservationRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
 import java.util.Optional;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -43,15 +42,15 @@ public class ReservationService {
         timer.schedule(task, delay);
     }
 
-    public void createCompleted(Long reservationId) throws Exception {
+    public Reservation createCompleted(Long reservationId, Long customerId) {
         Optional<Reservation> optionalReservation = repository.findById(reservationId);
-
-        if (optionalReservation.isPresent()) {
-            Reservation reservation = optionalReservation.get();
-            reservation.setPayed(true);
-            repository.save(reservation);
-            return;
+        if (optionalReservation.isEmpty()){
+            throw new RuntimeException("Бронь с ID " + reservationId + " не найдена.");
         }
-        throw new Exception("Бронь с ID " + reservationId + " не найдена.");
+
+        Reservation reservation = optionalReservation.get();
+        reservation.setPayed(true);
+        reservation.setCustomerId(customerId);
+        return repository.save(reservation);
     }
 }

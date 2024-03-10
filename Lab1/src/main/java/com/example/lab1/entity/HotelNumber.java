@@ -23,5 +23,4 @@ public class HotelNumber {
     private String city;
     private int square;
     private int rooms;
-    //todo ДОБАВИТЬ АДРЕС
 }

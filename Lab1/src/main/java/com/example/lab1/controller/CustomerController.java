@@ -18,18 +18,6 @@ public class CustomerController {
 
     private final CustomerService customerService;
 
-    @PostMapping()
-    public ResponseEntity<Customer> create(@RequestBody CustomerDTO customerDTO) {
-        Customer customer;
-        try {
-            customer = customerService.create(customerDTO);
-        }
-        catch (Exception e) {
-            return new ResponseEntity<>(HttpStatus.EXPECTATION_FAILED);
-        }
-        return new ResponseEntity<>(customer, HttpStatus.OK);
-    }
-
     @GetMapping()
     public ResponseEntity<List<Customer>> readAll() {
         return new ResponseEntity<>(customerService.findAll(), HttpStatus.OK);

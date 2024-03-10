@@ -12,4 +12,5 @@ public class CustomerDTO {
     private String nation;
 
     private Long numberOfCard;
+    private Long reservationId;
 }
