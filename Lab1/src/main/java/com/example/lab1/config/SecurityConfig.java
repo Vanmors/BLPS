@@ -35,7 +35,7 @@ public class SecurityConfig {
                 .password(passwordEncoder().encode("Adminman"))
                 .roles("USER")
                 .build();
-        return new InMemoryUserDetailsManager(user1);
+        return new InMemoryUserDetailsManager(user1, user2);
     }
 
     @Bean

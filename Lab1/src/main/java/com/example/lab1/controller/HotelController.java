@@ -14,12 +14,13 @@ import java.time.LocalDate;
 import java.util.List;
 
 
-@RestController
+@RestController()
 @AllArgsConstructor
 @RequestMapping("/hotel")
 public class HotelController {
     private final HotelNumberService hotelService;
 
+    //http://localhost:8081/hotel?dataBegin=2024-03-12&dataEnd=2024-03-15&city=Paris
     @GetMapping()
     public ResponseEntity<List<HotelNumber>> getHotels(@RequestParam LocalDate dataBegin,
                                                        @RequestParam LocalDate dataEnd,
