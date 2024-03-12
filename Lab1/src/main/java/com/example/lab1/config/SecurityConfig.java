@@ -1,5 +1,6 @@
 package com.example.lab1.config;
 
+import com.example.lab1.service.XmlUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,21 +23,21 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 public class SecurityConfig {
 
-    @Bean
-    public InMemoryUserDetailsManager inMemoryUserDetailsManager() {
-
-        UserDetails user1 = User.builder()
-                .username("Ivan")
-                .password(passwordEncoder().encode("Adminman"))
-                .roles("ADMIN")
-                .build();
-        UserDetails user2 = User.builder()
-                .username("Ilya")
-                .password(passwordEncoder().encode("Adminman"))
-                .roles("USER")
-                .build();
-        return new InMemoryUserDetailsManager(user1);
-    }
+//    @Bean
+//    public InMemoryUserDetailsManager inMemoryUserDetailsManager() {
+//
+//        UserDetails user1 = User.builder()
+//                .username("Ivan")
+//                .password(passwordEncoder().encode("Adminman"))
+//                .roles("ADMIN")
+//                .build();
+//        UserDetails user2 = User.builder()
+//                .username("Ilya")
+//                .password(passwordEncoder().encode("Adminman"))
+//                .roles("USER")
+//                .build();
+//        return new InMemoryUserDetailsManager(user1);
+//    }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -58,5 +59,10 @@ public class SecurityConfig {
                 .formLogin(Customizer.withDefaults())
                 .httpBasic(Customizer.withDefaults());
         return http.build();
+    }
+
+    @Bean
+    public UserDetailsService userDetailsService() {
+        return new XmlUserDetailsService();
     }
 }

@@ -8,6 +8,7 @@ import com.example.lab1.service.ReservationService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -21,6 +22,7 @@ public class HotelController {
     private final HotelNumberService hotelService;
 
     @GetMapping()
+    @PreAuthorize("hasRole('USER')")
     public ResponseEntity<List<HotelNumber>> getHotels(@RequestParam LocalDate dataBegin,
                                                        @RequestParam LocalDate dataEnd,
                                                        @RequestParam String city) {
