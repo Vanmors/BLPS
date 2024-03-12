@@ -22,22 +22,21 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 @Configuration
 public class SecurityConfig {
+    @Bean
+    public InMemoryUserDetailsManager inMemoryUserDetailsManager() {
 
-//    @Bean
-//    public InMemoryUserDetailsManager inMemoryUserDetailsManager() {
-//
-//        UserDetails user1 = User.builder()
-//                .username("Ivan")
-//                .password(passwordEncoder().encode("Adminman"))
-//                .roles("ADMIN")
-//                .build();
-//        UserDetails user2 = User.builder()
-//                .username("Ilya")
-//                .password(passwordEncoder().encode("Adminman"))
-//                .roles("USER")
-//                .build();
-//        return new InMemoryUserDetailsManager(user1);
-//    }
+        UserDetails user1 = User.builder()
+                .username("Ivan")
+                .password(passwordEncoder().encode("Adminman"))
+                .roles("ADMIN")
+                .build();
+        UserDetails user2 = User.builder()
+                .username("Ilya")
+                .password(passwordEncoder().encode("Adminman"))
+                .roles("USER")
+                .build();
+        return new InMemoryUserDetailsManager(user1, user2);
+    }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
