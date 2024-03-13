@@ -1,9 +1,6 @@
 package com.example.lab1.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
@@ -19,5 +16,7 @@ public class UserAccount {
 
     private String username;
     private String password;
-    private String role;
+    @ManyToOne
+    @JoinColumn(name = "fk_role_id")
+    private Role role;
 }

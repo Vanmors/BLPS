@@ -4,9 +4,11 @@ import com.example.lab1.dto.UserAccountDTO;
 import com.example.lab1.entity.UserAccount;
 import com.example.lab1.repository.UserAccountRepository;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -14,18 +16,25 @@ import java.util.List;
 
 @Service
 @AllArgsConstructor
-public class UserAccountService {
+public class UserAccountService implements UserDetailsService {
 
     private final UserAccountRepository repository;
 
+    @Autowired
+    UserAccountRepository userRepository;
 
-    public UserAccount create(UserAccountDTO userAccountDTO){
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        UserAccount user = userRepository.findByUsername(username);
+        return new UserDetailsImpl(user);
+    }
+    public UserAccount create(UserAccountDTO userDTO) {
         UserAccount person = UserAccount.builder().
-                username(userAccountDTO.getUsername()).
-                password(userAccountDTO.getPassword()).
-                role(userAccountDTO.getRole()).
+                username(userDTO.getUsername()).
+                password(new BCryptPasswordEncoder().encode(userDTO.getPassword()) ).
+                role(userDTO.getRole()).
                 build();
-        return repository.save(person);
+        return userRepository.save(person);
     }
 
     public List<UserAccount> readAll() {
