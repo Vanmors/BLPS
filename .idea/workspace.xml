@@ -5,47 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96fc309b-3e0b-4d8e-905a-7e1c4e47462a" name="Changes" comment="Исправил getHotels">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/BLPS.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BankingService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BankingService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BankingService/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookingService/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookingService/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BookingService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BookingService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/lab1/Lab1Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/lab1/config/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/lab1/controller/CustomerController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/lab1/controller/HotelController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/lab1/controller/ReservationController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/lab1/controller/RoleController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/lab1/controller/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/lab1/dto/CustomerDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/lab1/dto/HotelNumberDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/lab1/dto/ReservationDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/lab1/dto/UserAccountDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/lab1/entity/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/lab1/entity/HotelNumber.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/lab1/entity/Reservation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/lab1/entity/Role.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/lab1/entity/UserAccount.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/lab1/repository/CustomerRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/lab1/repository/HotelNumberRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/lab1/repository/ReservationRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/lab1/repository/RoleRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/lab1/repository/UserAccountRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/lab1/service/CustomerService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/lab1/service/HotelNumberService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/lab1/service/ReservationService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/lab1/service/UserAccountService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/lab1/service/UserDetailsImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmailService/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmailService/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmailService/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmailService/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmailService/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmailService/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmailService/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmailService/src/main/java/org/example/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +38,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
@@ -78,34 +48,65 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/IdeaProjects/TPO2&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;2903db99e82a5953fa3de877ec7b44c0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "corretto-17",
+    "last_opened_file_path": "C:/Users/User/IdeaProjects/BLPS/email-service/pom.xml",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "spring.configuration.checksum": "471988a1aa06239bd371b8583e877ef1",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Spring Boot.Lab1Application">
+}]]></component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.EmailServiceApplication">
     <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="BankingService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.banking.service.demo.DemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmailServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="email-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.email.service.emailservice.EmailServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Lab1Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="BookingService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Lab1Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -117,6 +118,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.Lab1Application (1)" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -136,6 +142,8 @@
       <workItem from="1711901850297" duration="200000" />
       <workItem from="1713810072754" duration="3011000" />
       <workItem from="1713813097252" duration="43000" />
+      <workItem from="1713813318728" duration="611000" />
+      <workItem from="1713814061497" duration="449000" />
     </task>
     <task id="LOCAL-00001" summary="f">
       <option name="closed" value="true" />

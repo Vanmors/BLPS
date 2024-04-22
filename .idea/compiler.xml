@@ -2,18 +2,31 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+<<<<<<< HEAD
       <profile default="true" name="Default" enabled="true" />
+=======
+>>>>>>> 61079b767688657b0883d8ed47965c761a759ddc
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+<<<<<<< HEAD
         <module name="BookingService" />
+=======
+        <module name="BankingService" />
+        <module name="BookingService" />
+        <module name="email-service" />
+>>>>>>> 61079b767688657b0883d8ed47965c761a759ddc
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+<<<<<<< HEAD
       <module name="BookingService" options="-parameters" />
+=======
+      <module name="email-service" options="-parameters" />
+>>>>>>> 61079b767688657b0883d8ed47965c761a759ddc
     </option>
   </component>
 </project>
