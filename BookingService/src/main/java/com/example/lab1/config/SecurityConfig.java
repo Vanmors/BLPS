@@ -50,6 +50,7 @@ public class SecurityConfig {
                 .authorizeRequests()
                 .requestMatchers(HttpMethod.GET, "/hotel").hasAnyRole("USER", "ADMIN")
                 .requestMatchers(HttpMethod.POST, "/hotel").hasRole("ADMIN")
+                .requestMatchers("/reservation/**").hasAnyRole("ADMIN", "USER")
                 .requestMatchers(HttpMethod.DELETE, "/hotel").hasRole("ADMIN")
                 .requestMatchers(HttpMethod.PUT, "/hotel").hasRole("ADMIN")
                 .requestMatchers("/user").permitAll()

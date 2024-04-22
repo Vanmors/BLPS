@@ -1,5 +1,6 @@
 package com.example.lab1.service;
 
+import com.example.lab1.dto.HotelNumberDTO;
 import com.example.lab1.entity.HotelNumber;
 import com.example.lab1.repository.HotelNumberRepository;
 import lombok.AllArgsConstructor;
@@ -19,5 +20,15 @@ public class HotelNumberService {
 
     public List<HotelNumber> getAvailableRooms(String city, LocalDate dateBegin, LocalDate dateEnd) {
         return repository.findAvailableRooms(city, dateBegin, dateEnd);
+    }
+
+    public HotelNumber create(HotelNumberDTO hotelNumberDTO) {
+        HotelNumber hotel = HotelNumber.builder()
+                .hotelName(hotelNumberDTO.getHotelName())
+                .city(hotelNumberDTO.getCity())
+                .square(hotelNumberDTO.getSquare())
+                .rooms(hotelNumberDTO.getRooms())
+                .build();
+        return repository.save(hotel);
     }
 }
