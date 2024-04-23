@@ -1,7 +1,6 @@
 package com.example.config;
 
 import org.springframework.amqp.core.*;
-import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
@@ -23,7 +22,18 @@ public class RabbitConfig {
         rabbitTemplate.setMessageConverter(messageConverter());
         return rabbitTemplate;
     }
+//    @Bean
+//    public JmsListenerContainerFactory<?> jmsListenerContainerFactory(ConnectionFactory connectionFactory) {
+//        DefaultJmsListenerContainerFactory factory = new DefaultJmsListenerContainerFactory();
+//        factory.setConnectionFactory(connectionFactory);
+//        // Другие настройки фабрики контейнеров сообщений JMS
+//        return factory;
+//    }
 
+//    @Bean
+//    public JmsTemplate jmsTemplate(ConnectionFactory connectionFactory) {
+//        return new JmsTemplate(connectionFactory);
+//    }
 
     @Bean
     public Queue emailQueue() {
