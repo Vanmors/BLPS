@@ -1,7 +1,6 @@
 package com.example.lab1.config;
 
-import com.example.lab1.entity.UserAccount;
-import com.example.lab1.service.UserAccountService;
+import com.example.service.UserAccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

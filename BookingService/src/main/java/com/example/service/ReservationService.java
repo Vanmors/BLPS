@@ -1,8 +1,8 @@
-package com.example.lab1.service;
+package com.example.service;
 
-import com.example.lab1.dto.ReservationDTO;
-import com.example.lab1.entity.Reservation;
-import com.example.lab1.repository.ReservationRepository;
+import com.example.dto.ReservationDTO;
+import com.example.entity.Reservation;
+import com.example.repository.ReservationRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

@@ -1,8 +1,8 @@
-package com.example.lab1.service;
+package com.example.service;
 
-import com.example.lab1.dto.CustomerDTO;
-import com.example.lab1.entity.Customer;
-import com.example.lab1.repository.CustomerRepository;
+import com.example.dto.CustomerDTO;
+import com.example.entity.Customer;
+import com.example.repository.CustomerRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

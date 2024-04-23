@@ -1,6 +1,6 @@
-package com.example.lab1.repository;
+package com.example.repository;
 
-import com.example.lab1.entity.HotelNumber;
+import com.example.entity.HotelNumber;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

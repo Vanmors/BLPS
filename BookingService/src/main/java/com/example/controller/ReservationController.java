@@ -1,11 +1,10 @@
-package com.example.lab1.controller;
+package com.example.controller;
 
-import com.example.lab1.dto.CustomerDTO;
-import com.example.lab1.dto.ReservationDTO;
-import com.example.lab1.entity.Customer;
-import com.example.lab1.entity.Reservation;
-import com.example.lab1.service.CustomerService;
-import com.example.lab1.service.ReservationService;
+import com.example.dto.CustomerDTO;
+import com.example.dto.ReservationDTO;
+import com.example.entity.Reservation;
+import com.example.service.CustomerService;
+import com.example.service.ReservationService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

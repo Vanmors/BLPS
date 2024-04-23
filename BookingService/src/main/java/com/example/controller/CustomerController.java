@@ -1,8 +1,8 @@
-package com.example.lab1.controller;
+package com.example.controller;
 
 
-import com.example.lab1.entity.Customer;
-import com.example.lab1.service.CustomerService;
+import com.example.entity.Customer;
+import com.example.service.CustomerService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

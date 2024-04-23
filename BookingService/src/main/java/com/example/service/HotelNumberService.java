@@ -1,8 +1,8 @@
-package com.example.lab1.service;
+package com.example.service;
 
-import com.example.lab1.dto.HotelNumberDTO;
-import com.example.lab1.entity.HotelNumber;
-import com.example.lab1.repository.HotelNumberRepository;
+import com.example.dto.HotelNumberDTO;
+import com.example.entity.HotelNumber;
+import com.example.repository.HotelNumberRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

@@ -1,8 +1,8 @@
-package com.example.lab1.controller;
+package com.example.controller;
 
-import com.example.lab1.dto.UserAccountDTO;
-import com.example.lab1.entity.UserAccount;
-import com.example.lab1.service.UserAccountService;
+import com.example.dto.UserAccountDTO;
+import com.example.entity.UserAccount;
+import com.example.service.UserAccountService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,6 +1,6 @@
-package com.example.lab1.dto;
+package com.example.dto;
 
-import com.example.lab1.entity.Role;
+import com.example.entity.Role;
 import lombok.Data;
 
 @Data

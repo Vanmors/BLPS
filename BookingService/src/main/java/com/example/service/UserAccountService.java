@@ -1,8 +1,8 @@
-package com.example.lab1.service;
+package com.example.service;
 
-import com.example.lab1.dto.UserAccountDTO;
-import com.example.lab1.entity.UserAccount;
-import com.example.lab1.repository.UserAccountRepository;
+import com.example.dto.UserAccountDTO;
+import com.example.entity.UserAccount;
+import com.example.repository.UserAccountRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
