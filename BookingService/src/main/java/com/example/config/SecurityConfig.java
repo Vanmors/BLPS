@@ -1,4 +1,4 @@
-package com.example.lab1.config;
+package com.example.config;
 
 import com.example.service.UserAccountService;
 import org.springframework.beans.factory.annotation.Autowired;
