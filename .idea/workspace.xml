@@ -5,16 +5,54 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96fc309b-3e0b-4d8e-905a-7e1c4e47462a" name="Changes" comment="Исправил getHotels">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+>>>>>>> 0f66477f1652329445d15bbe90b60d7f23e10a7c
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BankingService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BankingService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BankingService/src/main/java/com/banking/service/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/BankingService/src/main/java/com/demo/DemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BankingService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BankingService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BankingService/src/test/java/com/banking/service/demo/DemoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/BankingService/src/test/java/com/banking/service/demo/DemoApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BookingService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BookingService/pom.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/config/RabbitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/example/config/RabbitConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/controller/EmailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/example/controller/EmailController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/email-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/email-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/email-service/src/main/java/com/email/service/emailservice/EmailListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/email-service/src/main/java/com/email/service/emailservice/EmailListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/email-service/src/main/java/com/email/service/emailservice/EmailServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/email-service/src/main/java/com/email/service/emailservice/EmailServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/email-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/email-service/src/main/resources/application.properties" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/example/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/example/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/controller/HotelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/example/controller/HotelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/controller/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/example/controller/ReservationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/controller/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/example/controller/RoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/example/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/dto/CustomerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/example/dto/CustomerDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/dto/HotelNumberDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/example/dto/HotelNumberDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/dto/ReservationDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/example/dto/ReservationDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/dto/UserAccountDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/example/dto/UserAccountDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/example/entity/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/entity/HotelNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/example/entity/HotelNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/entity/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/example/entity/Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/entity/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/example/entity/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/entity/UserAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/example/entity/UserAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/repository/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/example/repository/CustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/repository/HotelNumberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/example/repository/HotelNumberRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/repository/ReservationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/example/repository/ReservationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/example/repository/RoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/repository/UserAccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/example/repository/UserAccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/example/service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/service/HotelNumberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/example/service/HotelNumberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/example/service/ReservationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/service/UserAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/example/service/UserAccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookingService/src/main/java/com/example/service/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookingService/src/main/java/com/example/service/UserDetailsImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookingService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BookingService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/email-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/email-service/pom.xml" afterDir="false" />
+>>>>>>> 0f66477f1652329445d15bbe90b60d7f23e10a7c
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +88,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
@@ -84,6 +123,42 @@
       <recent name="com.example.entity" />
       <recent name="com.email.service.emailservice" />
       <recent name="com.email.service.emailservice.configuration" />
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "corretto-17",
+    "last_opened_file_path": "C:/Users/User/IdeaProjects/BLPS/email-service/pom.xml",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "spring.configuration.checksum": "2c174b51043e8dd59b239fcb83a392d9",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.banking.service.demo" />
+      <recent name="com.banking" />
+      <recent name="com.banking.service" />
+>>>>>>> 0f66477f1652329445d15bbe90b60d7f23e10a7c
     </key>
   </component>
   <component name="RunDashboard">
@@ -93,6 +168,7 @@
       </set>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Application.EmailServiceApplication">
     <configuration name="EmailServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.email.service.emailservice.EmailServiceApplication" />
@@ -113,6 +189,15 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.*" />
+=======
+  <component name="RunManager" selected="Spring Boot.DemoApplication (1)">
+    <configuration name="DemoApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="BankingService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.demo.DemoApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.demo.*" />
+>>>>>>> 0f66477f1652329445d15bbe90b60d7f23e10a7c
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -156,8 +241,13 @@
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
         <item itemvalue="Application.EmailServiceApplication" />
         <item itemvalue="Application.Lab1Application" />
+=======
+        <item itemvalue="Spring Boot.DemoApplication (1)" />
+        <item itemvalue="Spring Boot.Lab1Application (1)" />
+>>>>>>> 0f66477f1652329445d15bbe90b60d7f23e10a7c
       </list>
     </recent_temporary>
   </component>
@@ -180,7 +270,9 @@
       <workItem from="1713810072754" duration="3011000" />
       <workItem from="1713813097252" duration="43000" />
       <workItem from="1713813318728" duration="611000" />
-      <workItem from="1713814061497" duration="449000" />
+      <workItem from="1713814061497" duration="753000" />
+      <workItem from="1713814825457" duration="3649000" />
+      <workItem from="1713897340830" duration="12038000" />
     </task>
     <task id="LOCAL-00001" summary="f">
       <option name="closed" value="true" />
@@ -246,6 +338,20 @@
     <MESSAGE value="Поправил id чтоб равнялся null в hotel_number" />
     <MESSAGE value="Исправил getHotels" />
     <option name="LAST_COMMIT_MESSAGE" value="Исправил getHotels" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.postgresql.util.PSQLException" package="org.postgresql.util" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.springframework.beans.factory.BeanCreationException" package="org.springframework.beans.factory" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
