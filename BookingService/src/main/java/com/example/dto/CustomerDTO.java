@@ -11,6 +11,6 @@ public class CustomerDTO {
     private String phoneNumber;
     private String nation;
 
-    private Long numberOfCard;
-    private Long reservationId;
+    private String numberOfCard;
+    private Long reservationId; // hotelId -> pay_amount
 }

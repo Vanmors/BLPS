@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @AllArgsConstructor
@@ -28,7 +29,12 @@ public class HotelNumberService {
                 .city(hotelNumberDTO.getCity())
                 .square(hotelNumberDTO.getSquare())
                 .rooms(hotelNumberDTO.getRooms())
+                .payment(hotelNumberDTO.getPayment())
                 .build();
         return repository.save(hotel);
+    }
+
+    public Optional<HotelNumber> findById(Long id){
+        return repository.findById(id);
     }
 }

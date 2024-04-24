@@ -8,4 +8,5 @@ public class HotelNumberDTO {
     private String city;
     private int square;
     private int rooms;
+    private int payment;
 }
