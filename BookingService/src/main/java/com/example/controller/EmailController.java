@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.jms.JMSConnectionFactory;
-
 @RestController
 public class EmailController {
 
@@ -25,4 +23,6 @@ public class EmailController {
         rabbitTemplate.convertAndSend(RabbitConfig.EXCHANGE, RabbitConfig.ROUTING_KEY, email);
         return "Message published";
     }
+
+
 }
