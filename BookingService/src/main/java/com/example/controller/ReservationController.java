@@ -28,11 +28,22 @@ public class ReservationController {
         return new ResponseEntity<>(reservation, HttpStatus.OK);
     }
 
+    //todo добавить RESERVATION ПОЛЕ
+
     @PostMapping("confirmation")
     @Transactional
     public ResponseEntity<Reservation> completeToChooseHotelRoom(@RequestBody CustomerDTO customerDTO) {
         var customer = customerService.create(customerDTO);
-        var ans = reservationService.createCompleted(customerDTO.getReservationId(), customer.getId());
+        var ans = reservationService.createCompleted(customerDTO.getReservationId(), customer.getId(), customer.getNumberOfCard());
+        return new ResponseEntity<>(ans, HttpStatus.OK);
+    }
+
+    //ТЕСТОВЫЙ КОНТРОЛЛЕР
+    @PostMapping("test")
+    @Transactional
+    public ResponseEntity<Reservation> test(@RequestBody CustomerDTO customerDTO) {
+        var customer = customerService.create(customerDTO);
+        var ans = reservationService.createCompleted(customerDTO.getReservationId(), customer.getId(), customer.getNumberOfCard());
         return new ResponseEntity<>(ans, HttpStatus.OK);
     }
 }

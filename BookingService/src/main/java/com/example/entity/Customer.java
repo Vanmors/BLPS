@@ -29,6 +29,6 @@ public class Customer {
 
     private Long personId;
 
-    private Long numberOfCard;
+    private String numberOfCard;
 
 }
