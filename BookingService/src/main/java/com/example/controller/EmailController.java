@@ -15,14 +15,11 @@ public class EmailController {
     @Autowired
     RabbitTemplate rabbitTemplate;
 
-
     @PostMapping("/publish")
     public String publishMessage(@RequestBody EmailMessage email) {
         System.out.println(email);
-//        email.setEmail("helooo");
         rabbitTemplate.convertAndSend(RabbitConfig.EXCHANGE, RabbitConfig.ROUTING_KEY, email);
         return "Message published";
     }
-
 
 }
