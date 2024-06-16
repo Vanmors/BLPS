@@ -4,18 +4,24 @@ import com.example.dto.HotelNumberDTO;
 import com.example.entity.HotelNumber;
 import com.example.service.HotelNumberService;
 import lombok.AllArgsConstructor;
+import org.camunda.bpm.engine.delegate.DelegateExecution;
+import org.camunda.bpm.engine.delegate.JavaDelegate;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.Instant;
 import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @RestController
 @AllArgsConstructor
 @RequestMapping("/hotel")
-public class HotelController {
+public class HotelController implements JavaDelegate {
 
 
     private final HotelNumberService hotelService;
@@ -35,5 +41,25 @@ public class HotelController {
     @PostMapping
     public ResponseEntity<HotelNumber> createHotel(@RequestBody HotelNumberDTO hotelNumberDTO) {
         return new ResponseEntity<>(hotelService.create(hotelNumberDTO), HttpStatus.OK);
+    }
+
+    @Override
+    public void execute(DelegateExecution delegateExecution) throws Exception {
+        String city = (String) delegateExecution.getVariable("city");
+        LocalDate dataBegin = convertToLocalDate((Date) delegateExecution.getVariable("dataBegin"));
+        LocalDate dataEnd =  convertToLocalDate((Date) delegateExecution.getVariable("dataEnd"));
+
+        var hotels = hotelService.getAvailableRooms(city, dataBegin, dataEnd);
+        if (hotels == null || hotels.isEmpty()) {
+            delegateExecution.setVariable("freeHotels", "Отелей нету");
+            return;
+        }
+        delegateExecution.setVariable("freeHotels", "Отели есть");
+    }
+
+    public static LocalDate convertToLocalDate(Date date) {
+        Instant instant = date.toInstant();
+
+        return instant.atZone(ZoneId.systemDefault()).toLocalDate();
     }
 }

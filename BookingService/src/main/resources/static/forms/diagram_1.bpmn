@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0oufjma" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.23.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.21.0">
+  <bpmn:collaboration id="Collaboration_1uf5zy8">
+    <bpmn:participant id="Participant_1fu1qt9" name="Pool" processRef="Process_1h94007" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_1h94007" isExecutable="true">
+    <bpmn:laneSet id="LaneSet_0a59sx4">
+      <bpmn:lane id="Lane_11txaqi" name="Server">
+        <bpmn:flowNodeRef>Activity_1n82kil</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_1pzgvzb" name="Client">
+        <bpmn:flowNodeRef>Event_1c1gxgk</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_1vz68oh</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="Event_1c1gxgk">
+      <bpmn:outgoing>Flow_007cgyd</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:userTask id="Activity_1vz68oh" name="Form for hotels">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="city" label="Ввдеите город" type="string">
+            <camunda:properties />
+            <camunda:validation />
+          </camunda:formField>
+          <camunda:formField id="dataBegin" label="Ввдеите дату начала" type="date" />
+          <camunda:formField id="dataEnd" label="Ввдеите дату конца" type="date" />
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_007cgyd</bpmn:incoming>
+      <bpmn:outgoing>Flow_05d9ut0</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:serviceTask id="Activity_1n82kil" name="Get Free Hotels" camunda:delegateExpression="${hotelController}">
+      <bpmn:incoming>Flow_05d9ut0</bpmn:incoming>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_007cgyd" sourceRef="Event_1c1gxgk" targetRef="Activity_1vz68oh" />
+    <bpmn:sequenceFlow id="Flow_05d9ut0" sourceRef="Activity_1vz68oh" targetRef="Activity_1n82kil" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_1uf5zy8">
+      <bpmndi:BPMNShape id="Participant_0inhhys_di" bpmnElement="Participant_1fu1qt9" isHorizontal="true">
+        <dc:Bounds x="180" y="80" width="820" height="490" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_11txaqi_di" bpmnElement="Lane_11txaqi" isHorizontal="true">
+        <dc:Bounds x="210" y="390" width="790" height="180" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1pzgvzb_di" bpmnElement="Lane_1pzgvzb" isHorizontal="true">
+        <dc:Bounds x="210" y="80" width="790" height="310" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1c1gxgk_di" bpmnElement="Event_1c1gxgk">
+        <dc:Bounds x="257" y="152" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0wbcjls_di" bpmnElement="Activity_1vz68oh">
+        <dc:Bounds x="345" y="130" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_027que4_di" bpmnElement="Activity_1n82kil">
+        <dc:Bounds x="360" y="430" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_007cgyd_di" bpmnElement="Flow_007cgyd">
+        <di:waypoint x="293" y="170" />
+        <di:waypoint x="345" y="170" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_05d9ut0_di" bpmnElement="Flow_05d9ut0">
+        <di:waypoint x="395" y="210" />
+        <di:waypoint x="395" y="320" />
+        <di:waypoint x="410" y="320" />
+        <di:waypoint x="410" y="430" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
