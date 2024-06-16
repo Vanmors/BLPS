@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0oufjma" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.23.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.21.0">
   <bpmn:collaboration id="Collaboration_1uf5zy8">
-    <bpmn:participant id="Participant_1fu1qt9" name="Pool" processRef="Process_1h94007" />
+    <bpmn:participant id="Participant_1fu1qt9" name="Pool" processRef="BPLS-process-v1" />
   </bpmn:collaboration>
-  <bpmn:process id="Process_1h94007" isExecutable="true">
+  <bpmn:process id="BPLS-process-v1" name="BPLS-v1" isExecutable="true">
     <bpmn:laneSet id="LaneSet_0a59sx4">
       <bpmn:lane id="Lane_11txaqi" name="Server">
         <bpmn:flowNodeRef>Activity_1n82kil</bpmn:flowNodeRef>
@@ -11,6 +11,8 @@
       <bpmn:lane id="Lane_1pzgvzb" name="Client">
         <bpmn:flowNodeRef>Event_1c1gxgk</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_1vz68oh</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_1fefhwu</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_05va2dd</bpmn:flowNodeRef>
       </bpmn:lane>
     </bpmn:laneSet>
     <bpmn:startEvent id="Event_1c1gxgk">
@@ -30,23 +32,43 @@
       <bpmn:incoming>Flow_007cgyd</bpmn:incoming>
       <bpmn:outgoing>Flow_05d9ut0</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:serviceTask id="Activity_1n82kil" name="Get Free Hotels" camunda:delegateExpression="${hotelController}">
+    <bpmn:serviceTask id="Activity_1n82kil" name="Process Free Hotels" camunda:delegateExpression="${hotelController}">
       <bpmn:incoming>Flow_05d9ut0</bpmn:incoming>
+      <bpmn:outgoing>Flow_0qllshq</bpmn:outgoing>
+      <bpmn:dataOutputAssociation id="DataOutputAssociation_1lqceoe">
+        <bpmn:targetRef>DataStoreReference_1vk8ne6</bpmn:targetRef>
+      </bpmn:dataOutputAssociation>
     </bpmn:serviceTask>
     <bpmn:sequenceFlow id="Flow_007cgyd" sourceRef="Event_1c1gxgk" targetRef="Activity_1vz68oh" />
     <bpmn:sequenceFlow id="Flow_05d9ut0" sourceRef="Activity_1vz68oh" targetRef="Activity_1n82kil" />
+    <bpmn:endEvent id="Event_1fefhwu">
+      <bpmn:incoming>Flow_1czvak8</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1czvak8" sourceRef="Activity_05va2dd" targetRef="Event_1fefhwu" />
+    <bpmn:userTask id="Activity_05va2dd" name="Get Free Hotels">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="freeHotels" label="Available hotels:" type="string" defaultValue="${freeHotels}" />
+          <camunda:formField id="ok" label="I am confirming that I saw available hotels" type="boolean" />
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0qllshq</bpmn:incoming>
+      <bpmn:outgoing>Flow_1czvak8</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_0qllshq" sourceRef="Activity_1n82kil" targetRef="Activity_05va2dd" />
+    <bpmn:dataStoreReference id="DataStoreReference_1vk8ne6" />
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_1uf5zy8">
       <bpmndi:BPMNShape id="Participant_0inhhys_di" bpmnElement="Participant_1fu1qt9" isHorizontal="true">
         <dc:Bounds x="180" y="80" width="820" height="490" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Lane_11txaqi_di" bpmnElement="Lane_11txaqi" isHorizontal="true">
-        <dc:Bounds x="210" y="390" width="790" height="180" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_1pzgvzb_di" bpmnElement="Lane_1pzgvzb" isHorizontal="true">
         <dc:Bounds x="210" y="80" width="790" height="310" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_11txaqi_di" bpmnElement="Lane_11txaqi" isHorizontal="true">
+        <dc:Bounds x="210" y="390" width="790" height="180" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_1c1gxgk_di" bpmnElement="Event_1c1gxgk">
@@ -60,6 +82,13 @@
         <dc:Bounds x="360" y="430" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1fefhwu_di" bpmnElement="Event_1fefhwu">
+        <dc:Bounds x="682" y="142" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0eckf2e_di" bpmnElement="Activity_05va2dd">
+        <dc:Bounds x="530" y="120" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_007cgyd_di" bpmnElement="Flow_007cgyd">
         <di:waypoint x="293" y="170" />
         <di:waypoint x="345" y="170" />
@@ -69,6 +98,23 @@
         <di:waypoint x="395" y="320" />
         <di:waypoint x="410" y="320" />
         <di:waypoint x="410" y="430" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1czvak8_di" bpmnElement="Flow_1czvak8">
+        <di:waypoint x="630" y="160" />
+        <di:waypoint x="682" y="160" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0qllshq_di" bpmnElement="Flow_0qllshq">
+        <di:waypoint x="460" y="470" />
+        <di:waypoint x="495" y="470" />
+        <di:waypoint x="495" y="160" />
+        <di:waypoint x="530" y="160" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="DataStoreReference_1vk8ne6_di" bpmnElement="DataStoreReference_1vk8ne6">
+        <dc:Bounds x="385" y="605" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="DataOutputAssociation_1lqceoe_di" bpmnElement="DataOutputAssociation_1lqceoe">
+        <di:waypoint x="410" y="510" />
+        <di:waypoint x="410" y="605" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

@@ -3,6 +3,7 @@ package com.example.controller;
 import com.example.dto.HotelNumberDTO;
 import com.example.entity.HotelNumber;
 import com.example.service.HotelNumberService;
+import jakarta.inject.Named;
 import lombok.AllArgsConstructor;
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
@@ -21,6 +22,7 @@ import java.util.List;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/hotel")
+@Named
 public class HotelController implements JavaDelegate {
 
 
@@ -51,10 +53,11 @@ public class HotelController implements JavaDelegate {
 
         var hotels = hotelService.getAvailableRooms(city, dataBegin, dataEnd);
         if (hotels == null || hotels.isEmpty()) {
-            delegateExecution.setVariable("freeHotels", "Отелей нету");
+            //delegateExecution.setVariable("freeHotels", "Отелей нету");
+            delegateExecution.setVariable("freeHotels", new ArrayList<HotelNumber>());
             return;
         }
-        delegateExecution.setVariable("freeHotels", "Отели есть");
+        delegateExecution.setVariable("freeHotels", hotels);
     }
 
     public static LocalDate convertToLocalDate(Date date) {

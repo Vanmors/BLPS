@@ -9,12 +9,14 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 @Builder
-public class HotelNumber {
+public class HotelNumber implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Long id;
