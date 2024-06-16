@@ -53,7 +53,6 @@ public class HotelController implements JavaDelegate {
 
         var hotels = hotelService.getAvailableRooms(city, dataBegin, dataEnd);
         if (hotels == null || hotels.isEmpty()) {
-            //delegateExecution.setVariable("freeHotels", "Отелей нету");
             delegateExecution.setVariable("freeHotels", new ArrayList<HotelNumber>());
             return;
         }
