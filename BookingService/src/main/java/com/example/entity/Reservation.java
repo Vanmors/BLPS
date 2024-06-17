@@ -9,6 +9,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 @Entity
@@ -16,7 +17,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Data
 @Builder
-public class Reservation {
+public class Reservation implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     private Long id;

@@ -6,6 +6,7 @@ import com.example.entity.HotelNumber;
 import com.example.entity.Reservation;
 import com.example.repository.ReservationRepository;
 import lombok.AllArgsConstructor;
+import org.camunda.bpm.engine.delegate.BpmnError;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.http.*;
@@ -77,6 +78,40 @@ public class ReservationService {
 
         if (response.getStatusCode() == HttpStatus.BAD_REQUEST) {
             throw new RuntimeException("Недостаточно средств на карте" + numberOfCard);
+        }
+
+        ///==========================
+        reservation.setPayed(true);
+        reservation.setCustomerId(customerId);
+        return repository.save(reservation);
+    }
+
+    public Reservation createCompletedForCamunda(Long reservationId, Long customerId, String numberOfCard) {
+        Optional<Reservation> optionalReservation = repository.findById(reservationId);
+        if (optionalReservation.isEmpty()) {
+            throw new BpmnError("BookingIdNotExists","Бронь с ID " + reservationId + " не найдена.");
+        }
+
+        Reservation reservation = optionalReservation.get();
+        Optional<HotelNumber> hotelNumberOptional = hotelNumberService.findById(reservation.getHotelId());
+        if (hotelNumberOptional.isEmpty()) {
+            throw new BpmnError("HotelIdNotExists","Отеля с таким ID" + reservation.getHotelId() + " не существует.");
+        }
+
+        HotelNumber hotelNumber = hotelNumberOptional.get();
+
+        //query
+        //===============================
+        RestTemplate restTemplate = new RestTemplate();
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+
+        var paymentDTO = new PaymentDTO(numberOfCard, "pay", hotelNumber.getPayment());
+        HttpEntity<PaymentDTO> requestEntity = new HttpEntity<>(paymentDTO, headers);
+        ResponseEntity<Void> response = restTemplate.postForEntity(bankingApiUrl, requestEntity, Void.class);
+
+        if (response.getStatusCode() == HttpStatus.BAD_REQUEST) {
+            throw new BpmnError("NotEnoughMoney","Недостаточно средств на карте" + numberOfCard);
         }
 
         ///==========================
