@@ -1,6 +1,5 @@
 package com.example.controller;
 
-import camundajar.impl.scala.Int;
 import com.example.dto.CustomerDTO;
 import com.example.dto.ReservationDTO;
 import com.example.entity.Reservation;
@@ -25,7 +24,7 @@ import java.util.Date;
 @RestController
 @AllArgsConstructor
 @RequestMapping("/reservation")
-public class ReservationController implements JavaDelegate {
+public class PreliminaryReservationController implements JavaDelegate {
     private final ReservationService reservationService;
     private final CustomerService customerService;
 
@@ -35,9 +34,7 @@ public class ReservationController implements JavaDelegate {
         reservationService.setTimer(reservation.getId());
         return new ResponseEntity<>(reservation, HttpStatus.OK);
     }
-
-    //todo добавить RESERVATION ПОЛЕ
-
+    /*
     @PostMapping("confirmation")
     @Transactional
     public ResponseEntity<Reservation> completeToChooseHotelRoom(@RequestBody CustomerDTO customerDTO) {
@@ -45,15 +42,7 @@ public class ReservationController implements JavaDelegate {
         var ans = reservationService.createCompleted(customerDTO.getReservationId(), customer.getId(), customer.getNumberOfCard());
         return new ResponseEntity<>(ans, HttpStatus.OK);
     }
-
-    //ТЕСТОВЫЙ КОНТРОЛЛЕР
-    @PostMapping("test")
-    @Transactional
-    public ResponseEntity<Reservation> test(@RequestBody CustomerDTO customerDTO) {
-        var customer = customerService.create(customerDTO);
-        var ans = reservationService.createCompleted(customerDTO.getReservationId(), customer.getId(), customer.getNumberOfCard());
-        return new ResponseEntity<>(ans, HttpStatus.OK);
-    }
+     */
 
     @Override
     public void execute(DelegateExecution delegateExecution) throws Exception {
@@ -65,7 +54,10 @@ public class ReservationController implements JavaDelegate {
 
         var reservation = reservationService.createTemporary(reservationDTO);
         reservationService.setTimer(reservation.getId());
-        System.out.println(reservation);
+        //System.out.println(reservation);
+        //delegateExecution.setVariable("reservationResult", reservation);
+        delegateExecution.setVariable("ok", true);
+        delegateExecution.setVariable("reservationId", reservation.getId());
     }
 
     public static LocalDate convertToLocalDate(Date date) {
