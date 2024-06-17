@@ -64,7 +64,7 @@ public class ConclusiveReservationController implements JavaDelegate {
                 reservationId(reservationId).
                 build();
         var customer = customerService.create(customerDTO);
-        var ans = reservationService.createCompletedForCamunda(customerDTO.getReservationId(), customer.getId(), customer.getNumberOfCard());
+        reservationService.createCompletedForCamunda(customerDTO.getReservationId(), customer.getId(), customer.getNumberOfCard());
 
     }
 }
