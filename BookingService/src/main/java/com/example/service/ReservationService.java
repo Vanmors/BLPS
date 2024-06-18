@@ -48,7 +48,7 @@ public class ReservationService {
         };
 
         Timer timer = new Timer("Timer");
-        long delay = 60L * 1000L; //*15L
+        long delay = 60L * 1000L * 15L; //*15L
         timer.schedule(task, delay);
     }
 
